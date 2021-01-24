@@ -7,11 +7,11 @@ import Post from './Post/Post';
 const Posts = ({setCurrentId}) => {
     const { Content } = Layout;
     const posts = useSelector((state) => state.posts);
+
+    console.log(posts);
     
     return (
         <Content>
- 
-            
             {(!posts.length) ? <Spin /> : (
                 <Content>
                     {posts.map((post) => (
@@ -21,8 +21,6 @@ const Posts = ({setCurrentId}) => {
                     ))}
                 </Content>
             )}
-
-  
         </Content>
     )
 }

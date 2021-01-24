@@ -8,13 +8,12 @@ import Posts from './components/Posts/Posts';
 import FormComponent from './components/Form/Form';
 
 function App() {
-  const { Header, Footer, Sider, Content } = Layout;
+  const { Content } = Layout;
   const [ currentId, setCurrentId ] = useState(null);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getPosts());
-    console.log('this was use effect on app js');
   }, [currentId, dispatch])
 
   const [isModalVisible, setIsModalVisible] = useState(false);
